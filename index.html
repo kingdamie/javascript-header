@@ -6,23 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- the div the header will be place  -->
+
     <div id="header-container"></div>
 
-    <script>
-        const xhr = new XMLHttpRequest();
-        const headerPath = 'header.html';
-        xhr.open('GET', headerPath, true);
-        xhr.onreadystatechange = function(){
-            if(xhr.readyState === 4 && xhr.status === 200){
-                document.getElementById('header-container').innerHTML = xhr.responseText;
-            }
-        };
-
-        xhr.send();
-    </script>
+   <!-- the body  -->
 
     <h1>
         index page
     </h1>
+
+    <script src="script.js"></script>
 </body>
 </html>
