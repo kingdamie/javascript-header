@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <script>
+        const xhr = new XMLHttpRequest();
+        const headerPath = 'header.html';
+        xhr.open('GET', headerPath, true);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4 && xhr.status === 200){
+                document.getElementById('header-container').innerHTML = xhr.responseText;
+            }
+        };
+
+        xhr.send();
+    </script>
+
+    <h1>
+        index page
+    </h1>
+</body>
+</html>
